@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Platform</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        nav { background: #007bff; padding: 15px; display: flex; flex-wrap: wrap; justify-content: center; }
+        nav a { color: white; margin: 10px; text-decoration: none; font-weight: bold; }
+        section { padding: 20px; display: none; background: white; margin: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        section.active { display: block; }
+        h2 { color: #007bff; }
+        .product { border: 1px solid #ddd; padding: 10px; margin: 10px 0; border-radius: 8px; }
+        .product img { max-width: 100%; height: auto; }
+        form input, form button { display: block; margin: 10px 0; padding: 10px; width: 100%; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('recharge')">Recharge</a>
+    <a href="#" onclick="showSection('product')">Product</a>
+    <a href="#" onclick="showSection('team')">Team</a>
+    <a href="#" onclick="showSection('withdrawal')">Withdrawal</a>
+    <a href="#" onclick="showSection('me')">ME</a>
+    <a href="#" onclick="showSection('check')">Check</a>
+    <a href="#" onclick="showSection('download')">Download</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+
+<section id="home" class="active">
+    <h2>About Our Company</h2>
+    <p>Welcome to our platform! We provide VIP membership services and daily income benefits. Start now and earn every day!</p>
+</section>
+
+<section id="recharge">
+    <h2>Recharge Info</h2>
+    <p><strong>Name:</strong> Sultan Mohamed Gemechu</p>
+    <p><strong>Bank:</strong> CBE</p>
+    <p><strong>Account:</strong> 1000634709006</p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Your Bank Name" required>
+        <input type="text" placeholder="Your Bank Account" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Recharge Now</button>
+    </form>
+</section>
+
+<section id="product">
+    <h2>Our VIP Packages</h2>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x150" alt="VIP1">
+        <p>VIP1 - 200 ETB/day - 1000 ETB</p>
+        <button onclick="showSection('recharge')">Recharge for VIP1</button>
+    </div>
+    <div class="product">
+        <img src="https://via.placeholder.com/300x150" alt="VIP2">
+        <p>VIP2 - 400 ETB/day - 2000 ETB</p>
+        <button onclick="showSection('recharge')">Recharge for VIP2</button>
+    </div>
+</section>
+
+<section id="team">
+    <h2>Your Referral Team</h2>
+    <p>Share your link: <input type="text" value="https://yourwebsite.com/ref/123" readonly></p>
+</section>
+
+<section id="withdrawal">
+    <h2>Withdrawal Form</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="Bank Name" required>
+        <input type="text" placeholder="Bank Account" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Withdraw</button>
+    </form>
+</section>
+
+<section id="me">
+    <h2>Login</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+    <h2>Sign Up</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Re-enter Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+</section>
+
+<section id="check">
+    <h2>Daily VIP Income</h2>
+    <form>
+        <input type="text" placeholder="Enter VIP Level" required>
+        <button type="submit">Claim Daily Income</button>
+    </form>
+</section>
+
+<section id="download">
+    <h2>Download Our App</h2>
+    <a href="#">Click here to download the application</a>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Telegram: <a href="https://t.me/HNA0993">@HNA0993</a></p>
+    <p>WhatsApp: <a href="https://wa.me/251993204587">0993204587</a></p>
+</section>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
